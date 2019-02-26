@@ -312,8 +312,8 @@ void topopt(int nelx, int nely, double volfrac, double penal, double rmin)
     // OC method
     OC(nelx, nely, dens/*out*/, volfrac, dc);
 
-#if 1
-    // kill a circle (obstacle)
+#if 0
+    // For fun: kills a circle of density (obstacle)
     ForArray2D(dens, i, j) {
       if ( length(v2f((float)i, (float)j) - v2f((float)nelx/2, (float)nely/2)) < nelx/6.0f) {
         dens.at(i, j) = 0.01;

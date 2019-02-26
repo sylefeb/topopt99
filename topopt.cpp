@@ -317,7 +317,7 @@ void topopt(int nelx, int nely, double volfrac, double penal, double rmin)
 #if 1
     // kill a circle (obstacle)
     ForArray2D(dens, i, j) {
-      if ( sqLength(v2f((float)i, (float)j) - v2f((float)nelx/2, (float)nely/2)) < nely/6.0f) {
+      if ( length(v2f((float)i, (float)j) - v2f((float)nelx/2, (float)nely/2)) < nelx/6.0f) {
         dens.at(i, j) = 0.01;
       }
     }

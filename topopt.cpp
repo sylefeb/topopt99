@@ -15,9 +15,7 @@ by Ole Sigmund.
 
 http://www.topopt.mek.dtu.dk/Apps-and-software/A-99-line-topology-optimization-code-written-in-MATLAB
 
-I simply re-implemented it in C/C++ in my own framework, and
-I am sharing it for educational purposes.
-
+I simply re-implemented it in C/C++ using LibSL-small and Eigen.
 And yes, it takes more than 99 lines of C/C++ ;-)
 
 Notations

@@ -219,7 +219,7 @@ void FE(int nelx, int nely, const Array2D<double>& dens, double penal, Array2D<v
   //                                         ^^^^^^^ force in y direction
   // solver
   cerr << "solving ...";
-  Eigen::SparseLU<Eigen::SparseMatrix<double> > solver(A);
+  Eigen::SimplicialLDLT<Eigen::SparseMatrix<double> > solver(A);
   Eigen::VectorXd result = solver.solve(b);
   cerr << " done.\n";
   // store computed displacement
